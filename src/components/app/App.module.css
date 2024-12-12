@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-inline-size: 50vw;
+  inline-size: 100%;
+  box-sizing: border-box;
+}
+.infoContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.filterContainer {
+  display: flex;
+  gap: 10px;
+}
+
