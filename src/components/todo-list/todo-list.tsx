@@ -18,10 +18,13 @@ export const TodoList = ({ todos, setTodos }: { todos: TTodo[], setTodos: React.
   }
 
   return (
-    <div className={styles.todoList}>
+    <ul
+      className={styles.todoList}
+      data-testid='todo-list'
+    >
       {todos.map(todo => {
         return <TodoUI onToggle={handleToogle} onDelete={handleDelete} todo={todo} key={todo.id} />
       })}
-    </div>
+    </ul>
   )
 }

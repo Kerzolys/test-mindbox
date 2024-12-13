@@ -35,7 +35,7 @@ export const FormTodo = ({todos, onAddTodo}:
       label: 'What needs to be done?',
       error: value ? '' : 'Field is required',
       variant: 'outlined',
-      value: value
+      value: value,
     }
   ]
 

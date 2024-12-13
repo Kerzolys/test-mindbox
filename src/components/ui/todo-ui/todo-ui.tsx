@@ -14,14 +14,21 @@ export const TodoUI: React.FC<TodoUiProps> = ({ todo, onToggle, onDelete }) => {
   }
 
   return (
-    <div className={styles.todo}>
+    <li className={styles.todo} data-testid='todo'>
       <Checkbox checked={todo.completed}
         onChange={handleToogle}
+        data-testid={`toggle-${todo.id}`}
       />
       <div className={styles.todo__todo} onClick={handleToogle}>
         {todo.todo}
       </div>
-      <ButtonUI color='error' onClick={handleDelete} startIcon={<Delete />} />
-    </div>
+      <ButtonUI
+        data-testid={`delete-${todo.id}`}
+        buttonText='Delete'
+        color='error'
+        onClick={handleDelete}
+        startIcon={<Delete />}
+      />
+    </li>
   )
 }

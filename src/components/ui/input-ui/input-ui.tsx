@@ -23,6 +23,7 @@ export const InputUI: React.FC<InputUiProps> = ({
       type={type}
       error={!value}
       helperText={error}
+      data-testid="input"
       {...props}
     />
   )

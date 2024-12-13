@@ -15,6 +15,7 @@ export const ButtonUI: React.FC<ButtonUiProps> = ({
       onClick={onClick}
       disabled={disabled}
       type={type}
+      data-testid='button'
       {...props}
     >
       {buttonText}

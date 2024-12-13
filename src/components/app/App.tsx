@@ -32,15 +32,18 @@ function App() {
   return (
     <main className={styles.container}>
       <FormTodo todos={todos} onAddTodo={handleAdd} />
-      <TodoList todos={filteredTodos()} setTodos={setTodos} />
+      <TodoList
+        todos={filteredTodos()}
+        setTodos={setTodos}
+      />
       <div className={styles.infoContainer}>
         <span>{uncompletedTodos.length} items left</span>
         <div className={styles.filterContainer}>
           <ButtonUI buttonText='All' onClick={() => setFilter('all')} />
-          <ButtonUI buttonText='Active' onClick={() => setFilter('active')} />
+          <ButtonUI data-testid='filter-active' buttonText='Active' onClick={() => setFilter('active')} />
           <ButtonUI buttonText='Completed' onClick={() => setFilter('completed')} />
         </div>
-        <ButtonUI buttonText='Clear Completed' onClick={clearTodos} size='small' color='warning'/>
+        <ButtonUI buttonText='Clear Completed' onClick={clearTodos} size='small' color='warning' />
       </div>
     </main>
   )
